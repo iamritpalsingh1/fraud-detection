@@ -75,3 +75,48 @@ In a normal scenario, a user swipes their card 1-2 times an hour. In a **Velocit
 This acts as the consumer, waiting for data patterns.
 ```bash
 python fraud_detector.py
+```
+
+**Step 2: Start the Transaction Generator This script generates synthetic traffic, injecting random "Velocity Attacks" every ~20 seconds.**
+```bash
+python transaction_generator.py
+```
+
+**Step 3: Monitor Dashboard**
+* Open Grafana at `http://localhost:3000` (Default login: `admin`/`admin`).
+* Connect to the PostgreSQL data source.
+* Watch the live dashboard update as fraud attacks are simulated in the terminal.
+
+---
+
+## 📊 Visuals
+
+### Real-Time Dashboard (Grafana)
+![Grafana Dashboard](https://github.com/yourusername/fraud-detection-project/blob/main/images/grafana_dashboard.png?raw=true)
+
+### Terminal Output
+![Terminal Output](https://github.com/yourusername/fraud-detection-project/blob/main/images/terminal_output.png?raw=true)
+
+---
+
+## 🔮 Future Improvements
+
+* **Machine Learning Integration:** Replace rule-based logic with an Isolation Forest model to detect unknown fraud patterns.
+* **Notification System:** Integrate AWS SNS or Slack Webhooks to send instant alerts to security teams.
+* **Cloud Deployment:** Migrate the local Docker infrastructure to AWS using EMR (Spark) and MSK (Managed Kafka).
+* **CI/CD Pipeline:** Implement GitHub Actions for automated testing and deployment.
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+### 👤 Author
+
+**Amrit** * [LinkedIn](https://www.linkedin.com/in/yourprofile)  
+* [GitHub](https://github.com/yourusername)
+
+
